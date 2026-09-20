@@ -1,0 +1,24 @@
+[package]
+name = "pgbackupcheck"
+version = "0.1.0"
+edition = "2021"
+description = "Actually restores a pg_dump file into a scratch database and reports whether it comes back clean, instead of trusting an untested backup"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/pgbackupcheck"
+readme = "README.md"
+keywords = ["postgres", "backup", "pg_dump", "pg_restore", "disaster-recovery"]
+categories = ["command-line-utilities", "database"]
+
+[lib]
+name = "pgbackupcheck"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pgbackupcheck"
+path = "src/main.rs"
+
+[dependencies]
+postgres = "0.19"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
