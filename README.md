@@ -8,6 +8,12 @@ says nothing about whether the resulting file will ever successfully
 become a database again. This runs the other half of that story for real,
 every time, instead of leaving it as an assumption.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
